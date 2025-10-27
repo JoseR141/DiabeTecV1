@@ -1,0 +1,89 @@
+.app-header {
+  background-color: #0d47a1;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 3;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.header-link {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+}
+
+.logo-icon {
+  width: 36px;
+  height: 36px;
+  overflow: visible;
+}
+
+/* Corazón que late */
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  25% { transform: scale(1.15); }
+  50% { transform: scale(1); }
+  75% { transform: scale(1.1); }
+}
+
+.heart-shape {
+  transform-origin: center;
+  animation: heartbeat 1s infinite;
+}
+
+/* ECG animado */
+.ecg-line {
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  animation: ecgAnim 1s linear infinite;
+}
+
+@keyframes ecgAnim {
+  0% { stroke-dashoffset: 200; }
+  100% { stroke-dashoffset: 0; }
+}
+
+.logo-text h1 {
+  margin: 0;
+  font-size: 1.6em;
+  font-weight: 600;
+}
+
+.download-button {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 0.9em;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.download-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .logo-text h1 {
+    font-size: 1.3em;
+  }
+  .download-button {
+    font-size: 0.8em;
+    padding: 6px 12px;
+  }
+}

@@ -1,0 +1,156 @@
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.welcome-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  text-align: center;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.welcome-title {
+  font-size: 2.5em;
+  color: #0d47a1; /* Azul tecnológico */
+  margin-bottom: 10px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.welcome-subtitle {
+  font-size: 1.1em;
+  color: #333;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.steps-container {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 120px;
+  text-align: center;
+}
+
+.step-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #e3f2fd;
+  color: #0d47a1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-bottom: 10px;
+  border: 2px solid #bbdefb;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(13, 71, 161, 0.3);
+}
+
+.step-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.start-button {
+  background: linear-gradient(45deg, #0091ea, #00c853);
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.2em;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 145, 234, 0.3);
+}
+
+.start-button:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 25px rgba(0, 200, 83, 0.4);
+}
+
+.start-button:disabled {
+  background: #bdc3c7;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.accept-prompt {
+  margin-top: 15px;
+  font-size: 0.9em;
+  color: #e74c3c;
+}
+
+/* 🔹 Animación de entrada */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.welcome-card {
+  animation: fadeInUp 0.8s ease-in-out;
+}
+
+.trust-section {
+  background: #e1edf7;
+  border-left: 6px solid #0d47a1; /* Azul tecnológico */
+  border-radius: 12px;
+  padding: 25px 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 20px rgba(13, 71, 161, 0.08);
+  animation: fadeInUp 0.9s ease-in-out;
+}
+
+.trust-title {
+  font-size: 1.6em;
+  font-weight: 800;
+  color: #0d47a1;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.trust-title::before {
+  content: "🔬"; /* Icono de ciencia */
+  margin-right: 10px;
+  font-size: 1.4em;
+}
+
+.trust-text {
+  font-size: 1em;
+  color: #333;
+  line-height: 1.7;
+  text-align: justify;
+}

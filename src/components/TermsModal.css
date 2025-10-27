@@ -1,0 +1,93 @@
+/* Backdrop del modal */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(17, 24, 39, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Contenido del modal */
+.modal-content {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #111;
+  padding: 30px 40px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15);
+  width: 90%;
+  max-width: 550px;
+  text-align: center;
+  animation: fadeIn 0.4s ease-out;
+}
+
+/* Título del modal */
+.modal-content h3 {
+  color: #0d47a1;
+  margin-top: 0;
+  font-size: 1.5em;
+}
+
+/* Texto de los términos */
+.terms-text {
+  text-align: left;
+  margin-bottom: 25px;
+  font-size: 0.9em;
+  line-height: 1.6;
+  max-height: 40vh;
+  overflow-y: auto;
+  padding-right: 10px;
+  scroll-behavior: smooth;
+}
+
+/* Botón de aceptación - mismo estilo que 'Iniciar Evaluación' */
+.accept-button {
+  background: linear-gradient(45deg, #0091ea, #00c853);
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.2em;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 145, 234, 0.3);
+}
+
+.accept-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 25px rgba(0, 200, 83, 0.4);
+}
+
+/* Animación de entrada del modal */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scrollbar opcional más moderno */
+.terms-text::-webkit-scrollbar {
+  width: 6px;
+}
+
+.terms-text::-webkit-scrollbar-thumb {
+  background-color: rgba(13, 71, 161, 0.4);
+  border-radius: 3px;
+}
+
+.terms-text::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}

@@ -1,0 +1,24 @@
+.app-footer {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 15px 20px;
+  font-size: 0.9em;
+  line-height: 1.5;
+  position: relative;
+  z-index: 3;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.footer-link {
+  color: #0d47a1;
+  text-decoration: none;
+  font-weight: 600;
+  display: block;
+  margin-top: 8px;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}

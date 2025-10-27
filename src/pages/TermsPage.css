@@ -1,0 +1,87 @@
+.terms-card {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 40px 50px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  max-width: 850px;
+  width: 100%;
+  animation: fadeInUp 0.8s ease-in-out;
+}
+
+.terms-card h2 {
+  text-align: center;
+  color: #0d47a1;
+  font-size: 2em;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.terms-card p {
+  font-size: 1em;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.indicator-list {
+  margin-left: 20px;
+  margin-bottom: 20px;
+  padding-left: 15px;
+  list-style-type: disc;
+  color: #0d47a1;
+  line-height: 1.6;
+}
+
+.indicator-list li {
+  margin-bottom: 10px;
+}
+
+.start-button {
+  background: linear-gradient(45deg, #0091ea, #00c853);
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.1em;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto 0;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 145, 234, 0.3);
+}
+
+.start-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 25px rgba(0, 200, 83, 0.4);
+}
+
+/* Animación de entrada */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .terms-card {
+    padding: 30px 25px;
+  }
+  .terms-card h2 {
+    font-size: 1.6em;
+  }
+  .start-button {
+    padding: 12px 30px;
+    font-size: 1em;
+  }
+}

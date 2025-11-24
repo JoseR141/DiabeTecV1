@@ -414,3 +414,46 @@ html[data-theme="dark"] .insight-card {
   border-color: #e5e7eb !important;
 }
 
+/* ====== HERO CARD CONTENEDOR ====== */
+.hero-card {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 22px 24px 18px;
+  margin-bottom: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  animation: fadeInUp 0.45s ease both;
+}
+html[data-theme='dark'] .hero-card {
+  background: #0f172a;
+  border-color: #233150;
+}
+.hero-card .hero {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 18px;
+}
+.hero-card .hero-context {
+  color: var(--ink-2);
+  font-size: 0.95rem;
+  margin-top: 10px;
+  text-align: center;
+}
+/* Frase de alerta */
+.hero-alert {
+  font-weight: 400;   /* antes 700 */
+  color: var(--ink-2);
+}
+
+.hero-alert span {
+  font-weight: 800;
+}
+.hero-card .ring-label {
+  text-align: center;
+  margin-top: 6px;
+  font-size: 0.9rem;
+  color: var(--ink-2);
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
